@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="chat-host" uuid="843521466F691F4EB194429A69063F43" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Table_1" uuid="46C6240B73024F73BA06D437B85E3BAB" id="1">
+		<field name="ID" uuid="27B5D77363114AC8A7EBE582E13845CC" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<primary_key field_name="ID" field_uuid="27B5D77363114AC8A7EBE582E13845CC"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="5C43C9F0C0184F5FB679D2AAA45F6191" type="7">
+		<field_ref uuid="27B5D77363114AC8A7EBE582E13845CC" name="ID">
+			<table_ref uuid="46C6240B73024F73BA06D437B85E3BAB" name="Table_1"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

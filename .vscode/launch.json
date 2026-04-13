@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "4d",
+            "request": "attach",
+            "name": "Attach",
+            "port": 19815
+        },
+        {
+            "type": "4d",
+            "request": "attach",
+            "name": "Attach and Run",
+            "program": "${file}",
+            "port": 19815
+        },
+        {
+            "type": "4d",
+            "request": "launch",
+            "name": "Launch and Run",
+            "program": "${file}",
+            "project": "${workspaceFolder}/Project/${workspaceFolderBasename}.4DProject",
+            "execArgs": []
+        },
+        {
+            "type": "4d",
+            "request": "launch",
+            "name": "Launch",
+            "project": "${workspaceFolder}/Project/${workspaceFolderBasename}.4DProject",
+            "execArgs": []
+        }
+    ]
+}

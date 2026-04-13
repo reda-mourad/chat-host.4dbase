@@ -1,0 +1,538 @@
+{
+	"_method_": {
+		"bestSize": {
+			"Syntax": "**bestSize**( *text* : Text; *maxWidth* : Integer; *props* : Object )->size : Object",
+			"Params": [
+				[
+					"text",
+					"Text",
+					"->"
+				],
+				[
+					"maxWidth",
+					"Integer",
+					"->"
+				],
+				[
+					"props",
+					"Object",
+					"->"
+				],
+				[
+					"size",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"buildConversationForm": {
+			"Syntax": "**buildConversationForm**( *messages* : Collection; *containerWidth* : Integer )->form : Object",
+			"Params": [
+				[
+					"messages",
+					"Collection",
+					"->"
+				],
+				[
+					"containerWidth",
+					"Integer",
+					"->"
+				],
+				[
+					"form",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_launcher_handler": {
+			"Syntax": "**chat_launcher_handler**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_notify": {
+			"Syntax": "**chat_notify**( *conversation* : cs.Chat.Conversation )",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_conversation": {
+			"Syntax": "**chat_server_conversation**( *users* : Collection; *subject* : Text ) : cs.Chat.Conversation",
+			"Params": [
+				[
+					"users",
+					"Collection",
+					"->"
+				],
+				[
+					"subject",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"cs.Chat.Conversation",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_conversations": {
+			"Syntax": "**chat_server_conversations**( *user* : cs.Chat.User )->conversations : Collection",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"conversations",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_init": {
+			"Syntax": "**chat_server_init**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_message": {
+			"Syntax": "**chat_server_message**( *user* : cs.Chat.User; *conversation* : cs.Chat.Conversation; *text* : Text ) : cs.Chat.Conversation",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				],
+				[
+					"text",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"cs.Chat.Conversation",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_save": {
+			"Syntax": "**chat_server_save**( *conversation* : Object )->saveConversation : cs.Chat.Conversation",
+			"Params": [
+				[
+					"conversation",
+					"Object",
+					"->"
+				],
+				[
+					"saveConversation",
+					"cs.Chat.Conversation",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_set_users": {
+			"Syntax": "**chat_server_set_users**( *users* : Collection )",
+			"Params": [
+				[
+					"users",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_unread": {
+			"Syntax": "**chat_server_unread**( *user* : cs.Chat.User; *conversations* : Collection )->unread : Integer",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"conversations",
+					"Collection",
+					"->"
+				],
+				[
+					"unread",
+					"Integer",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_user": {
+			"Syntax": "**chat_server_user**( *index* : Integer )->user : cs.Chat.User",
+			"Params": [
+				[
+					"index",
+					"Integer",
+					"->"
+				],
+				[
+					"user",
+					"cs.Chat.User",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_users": {
+			"Syntax": "**chat_server_users**( *user* : cs.Chat.User )->users : Collection",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"users",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_server_user_by_id": {
+			"Syntax": "**chat_server_user_by_id**( *id* : Text )->user : cs.Chat.User",
+			"Params": [
+				[
+					"id",
+					"Text",
+					"->"
+				],
+				[
+					"user",
+					"cs.Chat.User",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_update_unread": {
+			"Syntax": "**chat_update_unread**( *unread* : Integer )",
+			"Params": [
+				[
+					"unread",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"conversation_label": {
+			"Syntax": "**conversation_label**( *conversation* : cs.Chat.Conversation; *user* : cs.Chat.User )",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				],
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"isComponent": {
+			"Syntax": "**isComponent**() : Boolean",
+			"Params": [
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"is_read": {
+			"Syntax": "**is_read**( *conversation* : cs.Chat.Conversation; *user* : cs.Chat.User ) : Boolean",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				],
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"remote_ds": {
+			"Syntax": "**remote_ds**()->ds : 4D.DataStoreImplementation",
+			"Params": [
+				[
+					"ds",
+					"4D.DataStoreImplementation",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"updateConversationForm": {
+			"Syntax": "**updateConversationForm**( *conversation* : cs.Chat.Conversation )",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"cs.Chat": {
+		"Client": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"User": {
+			"new()": {
+				"Syntax": "**.new**( *name* : Text; *initials* : Text )",
+				"Params": [
+					[
+						"name",
+						"Text",
+						"->"
+					],
+					[
+						"initials",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Conversation": {
+			"new()": {
+				"Syntax": "**.new**( *users* : Collection; *subject* : Text )",
+				"Params": [
+					[
+						"users",
+						"Collection",
+						"->"
+					],
+					[
+						"subject",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Message": {
+			"new()": {
+				"Syntax": "**.new**( *text* : Text; *user* : cs.Chat.User )",
+				"Params": [
+					[
+						"text",
+						"Text",
+						"->"
+					],
+					[
+						"user",
+						"cs.Chat.User",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Parameters": {
+			"new()": {
+				"Syntax": "**.new**( *file* : 4D.File )",
+				"Params": [
+					[
+						"file",
+						"4D.File",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		}
+	},
+	"Client": {
+		"init()": {
+			"Syntax": "**.init**( *user* : cs.Chat.User )",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"open()": {
+			"Syntax": "**.open**( *type* : Integer )",
+			"Params": [
+				[
+					"type",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"buildLauncher()": {
+			"Syntax": "**.buildLauncher**()->form : Object",
+			"Params": [
+				[
+					"form",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"openLauncher()": {
+			"Syntax": "**.openLauncher**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"updateForm()": {
+			"Syntax": "**.updateForm**( *conversation* : cs.Chat.Conversation )",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"message()": {
+			"Syntax": "**.message**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"contactFilter()": {
+			"Syntax": "**.contactFilter**()",
+			"Params": [],
+			"Summary": ""
+		}
+	},
+	"User": {
+		"initials": {
+			"Syntax": "initials : Text"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"group": {
+			"Syntax": "group : Object"
+		},
+		"name": {
+			"Syntax": "name : Text"
+		},
+		"type": {
+			"Syntax": "type : Integer"
+		}
+	},
+	"Conversation": {
+		"addMessage()": {
+			"Syntax": "**.addMessage**( *text* : Text; *user* : cs.Chat.User )->message : cs.Chat.Message",
+			"Params": [
+				[
+					"text",
+					"Text",
+					"->"
+				],
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				],
+				[
+					"message",
+					"cs.Chat.Message",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"users": {
+			"Syntax": "users : Collection"
+		},
+		"subject": {
+			"Syntax": "subject : Text"
+		},
+		"messages": {
+			"Syntax": "messages : Collection"
+		}
+	},
+	"Message": {
+		"text": {
+			"Syntax": "text : Text"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"userId": {
+			"Syntax": "userId : Text"
+		},
+		"stamp": {
+			"Syntax": "stamp : Text"
+		},
+		"readBy": {
+			"Syntax": "readBy : Collection"
+		}
+	},
+	"Parameters": {
+		"messageMaxAge": {
+			"Syntax": "messageMaxAge : Integer"
+		},
+		"color": {
+			"Syntax": "color : Text"
+		}
+	}
+}

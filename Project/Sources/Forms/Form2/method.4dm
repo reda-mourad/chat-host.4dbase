@@ -1,0 +1,1 @@
+SET WINDOW TITLE("Bonjour "+Storage.chat.user.name)

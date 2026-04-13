@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="7">
+	<com.4d>
+		<compiler>
+			<options syntax_file="true"/>
+		</compiler>
+		<general component_classStore_name="Chat" />
+		<interface>
+			<user sdi_application="true" splash_screen="false"/>
+		</interface>
+	</com.4d>
+</preferences>

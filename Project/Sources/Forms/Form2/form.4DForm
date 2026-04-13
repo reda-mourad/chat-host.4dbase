@@ -1,0 +1,30 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad"
+	],
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus quam orci, non facilisis turpis porttitor ac. Fusce molestie sapien nec ligula vehicula mattis. Suspendisse eleifend feugiat ex, eget sodales justo suscipit non. Integer in odio volutpat, tempor nisi ac, malesuada quam. Maecenas condimentum a ligula a suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut in porttitor magna.",
+					"top": 20,
+					"left": 20,
+					"width": 292,
+					"height": 169
+				}
+			}
+		}
+	],
+	"geometryStamp": 16,
+	"method": "method.4dm"
+}
