@@ -13,7 +13,7 @@ If ($record#Null)
 	$record.Initiales:=$initials
 	$info:=$record.save()
 	chat_server_init()
-	cs.Client.me.init(chat_server_user_by_id(Storage.chat.user.id))
+	chat_init(chat_server_user_by_id(Storage.chat.user.id))
 	return $info.success
 	
 End if

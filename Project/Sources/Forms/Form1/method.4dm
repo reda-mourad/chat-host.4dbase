@@ -21,7 +21,7 @@ Case of
 		Form.selectedGroup:=Storage.chat.user.group
 		SET WINDOW TITLE("Messagerie instantanée ["+Storage.chat.user.name+"]")
 		Form.title:="Conversations"
-		cs.Client.me.updateForm()
+		chat_updateForm()
 		
 		
 	: (FORM Event.code=On Page Change)
@@ -30,7 +30,7 @@ Case of
 		
 		Case of 
 			: ($page=1)
-				cs.Client.me.updateForm()
+				chat_updateForm()
 				Form.title:="Conversations"
 				
 			: ($page=2)
@@ -52,7 +52,7 @@ Case of
 				Form.initials:=Storage.chat.user.initials
 				
 			: ($page=4)
-				cs.Client.me.updateForm(Form.currentConversation)
+				chat_updateForm(Form.currentConversation)
 				Form.title:=Form.currentConversation.label
 				
 		End case 
@@ -62,10 +62,10 @@ Case of
 		
 		
 	: (FORM Event.code=On Before Keystroke) && (FORM Event.objectName="inputText@")
-		cs.Client.me.message()
+		chat_message()
 		
 	: (FORM Event.code=On Clicked) && (FORM Event.objectName="buttonSend@")
-		cs.Client.me.message()
+		chat_message()
 		
 		
 	: (FORM Event.code=On Clicked) && (FORM Event.objectName="btnSave")
@@ -73,7 +73,7 @@ Case of
 		
 		
 	: (FORM Event.objectName="lbUsers") && (FORM Event.code=On Clicked)
-		cs.Client.me.contactFilter()
+		chat_contactFilter()
 		
 		
 	: (FORM Event.objectName="inputSearch") && (FORM Event.code=On After Edit)

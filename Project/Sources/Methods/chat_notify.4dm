@@ -9,5 +9,5 @@ $user:=chat_server_user_by_id($message.userId)
 
 DISPLAY NOTIFICATION($user.name; $message.text)
 
-CALL FORM(Num(Storage.chat.formRef); cs.Client.me.updateForm; $conversation)
+CALL FORM(Num(Storage.chat.formRef); Formula(chat_updateForm($1)); $conversation)
 

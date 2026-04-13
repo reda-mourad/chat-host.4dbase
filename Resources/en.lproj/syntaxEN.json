@@ -47,8 +47,52 @@
 			],
 			"Summary": ""
 		},
+		"chat_buildLauncher": {
+			"Syntax": "**chat_buildLauncher**()->form : Object",
+			"Params": [
+				[
+					"form",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_contactFilter": {
+			"Syntax": "**chat_contactFilter**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_init": {
+			"Syntax": "**chat_init**( *user* : cs.Chat.User )",
+			"Params": [
+				[
+					"user",
+					"cs.Chat.User",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
 		"chat_launcher_handler": {
 			"Syntax": "**chat_launcher_handler**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_message": {
+			"Syntax": "**chat_message**() : Variant",
 			"Params": [
 				[
 					"",
@@ -65,6 +109,28 @@
 					"conversation",
 					"cs.Chat.Conversation",
 					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_open": {
+			"Syntax": "**chat_open**( *type* : Integer )",
+			"Params": [
+				[
+					"type",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"chat_openLauncher": {
+			"Syntax": "**chat_openLauncher**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
 				]
 			],
 			"Summary": ""
@@ -239,6 +305,17 @@
 			],
 			"Summary": ""
 		},
+		"chat_updateForm": {
+			"Syntax": "**chat_updateForm**( *conversation* : cs.Chat.Conversation )",
+			"Params": [
+				[
+					"conversation",
+					"cs.Chat.Conversation",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
 		"chat_update_unread": {
 			"Syntax": "**chat_update_unread**( *unread* : Integer )",
 			"Params": [
@@ -319,34 +396,30 @@
 				]
 			],
 			"Summary": ""
+		},
+		"update_user_info": {
+			"Syntax": "**update_user_info**( *name* : Text; *initials* : Text ) : Boolean",
+			"Params": [
+				[
+					"name",
+					"Text",
+					"->"
+				],
+				[
+					"initials",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
 		}
 	},
 	"cs.Chat": {
-		"Client": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
-		"User": {
-			"new()": {
-				"Syntax": "**.new**( *name* : Text; *initials* : Text )",
-				"Params": [
-					[
-						"name",
-						"Text",
-						"->"
-					],
-					[
-						"initials",
-						"Text",
-						"->"
-					]
-				],
-				"Summary": ""
-			}
-		},
 		"Conversation": {
 			"new()": {
 				"Syntax": "**.new**( *users* : Collection; *subject* : Text )",
@@ -395,84 +468,24 @@
 				],
 				"Summary": ""
 			}
-		}
-	},
-	"Client": {
-		"init()": {
-			"Syntax": "**.init**( *user* : cs.Chat.User )",
-			"Params": [
-				[
-					"user",
-					"cs.Chat.User",
-					"->"
-				]
-			],
-			"Summary": ""
 		},
-		"open()": {
-			"Syntax": "**.open**( *type* : Integer )",
-			"Params": [
-				[
-					"type",
-					"Integer",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"buildLauncher()": {
-			"Syntax": "**.buildLauncher**()->form : Object",
-			"Params": [
-				[
-					"form",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"openLauncher()": {
-			"Syntax": "**.openLauncher**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"updateForm()": {
-			"Syntax": "**.updateForm**( *conversation* : cs.Chat.Conversation )",
-			"Params": [
-				[
-					"conversation",
-					"cs.Chat.Conversation",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"message()": {
-			"Syntax": "**.message**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"contactFilter()": {
-			"Syntax": "**.contactFilter**()",
-			"Params": [],
-			"Summary": ""
-		}
-	},
-	"User": {
-		"initials": {
-			"Syntax": "initials : Text"
-		},
-		"id": {
-			"Syntax": "id : Text"
-		},
-		"group": {
-			"Syntax": "group : Object"
-		},
-		"name": {
-			"Syntax": "name : Text"
-		},
-		"type": {
-			"Syntax": "type : Integer"
+		"User": {
+			"new()": {
+				"Syntax": "**.new**( *name* : Text; *initials* : Text )",
+				"Params": [
+					[
+						"name",
+						"Text",
+						"->"
+					],
+					[
+						"initials",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
 		}
 	},
 	"Conversation": {
@@ -533,6 +546,23 @@
 		},
 		"color": {
 			"Syntax": "color : Text"
+		}
+	},
+	"User": {
+		"initials": {
+			"Syntax": "initials : Text"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"group": {
+			"Syntax": "group : Object"
+		},
+		"name": {
+			"Syntax": "name : Text"
+		},
+		"type": {
+			"Syntax": "type : Integer"
 		}
 	}
 }
